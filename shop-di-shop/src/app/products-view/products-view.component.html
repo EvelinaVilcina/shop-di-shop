@@ -1,0 +1,28 @@
+<h1> All products </h1>
+<div class="container">
+    <div class="flex-container" >
+        <div fxLayout="row wrap" 
+        fxLayoutGap="30px" 
+        fxLayoutAlign=”space-between” style="row-gap: 30px;">
+
+            <mat-card
+            fxFlex="0 1 calc(25% - 30px)"
+            fxFlex.lt-lg="0 1 calc(32% - 30px)"
+            fxFlex.lt-md="0 1 calc(50% - 30px)"
+            fxFlex.lt-sm="100%"
+
+            *ngFor="let product of products" 
+            routerLink="/productview/{{product.id}}"
+            > 
+                <img mat-card-image fxLayout="center stretch" style="height: 300px;" src="{{product.images[0]}}"/>
+
+                <div style="margin: auto;">
+                    <mat-card-title>{{product.name}}</mat-card-title>
+                    <mat-card-subtitle>{{product.price}} EUR/per item</mat-card-subtitle>   
+                </div>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
+

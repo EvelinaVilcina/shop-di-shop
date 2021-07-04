@@ -1,0 +1,12 @@
+<div class="mat-app-background"> 
+  <mat-toolbar>
+      <nav>
+        <button mat-button [routerLink]="'/dashboard'"> Home </button>
+        <button mat-button [routerLink]="'/products'"> Products </button>
+        <button mat-button [routerLink]="'/shoppingcart'"> Shopping Cart </button>
+      </nav>
+  </mat-toolbar>
+  <div style="padding: 20px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
